@@ -9,25 +9,6 @@ a{
  background-color: transparent;
  color=#ededed;
 }
-header{
-    background-color: #000;
-    color: #fff;
-    border-color:#080808;
-    min-height:50px;
-    border:1px solid transparent;
-}
-.inner-header{
-    width:80%;
-    margin:auto;
-}
-.logo
-{
-    float: left;
-    height: 50px;
-    padding: 15px;
-    font-size: 20px;
-    font-weight: bold;
-}
 .header-link
 {
     float:right;
@@ -41,12 +22,12 @@ header{
 .content{
     min-height:600px;
 }
-.banner-image{
-    padding-bottom: 50px;
-     margin-bottom: 20px;
+#banner_image{
+    padding-top: 75px;
+     margin-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(intro-bg_1.jpg) no-repeat center;
+    background: url(intro-bg_1.jpg) no-repeat center center;
     
     background-size:cover;
 }
@@ -56,11 +37,11 @@ header{
     width:80%;
     margin:auto;
 }
-.banner_content{
+#banner_content{
     position: relative;
     padding-top: 6%;
     padding-bottom: 6%;
-    overflow:hidden;
+    margin-top: 12%;
     margin-bottom: 12%;
     background-color: rgba(0, 0, 0, 0.7);
     max-width: 660px;
@@ -74,11 +55,6 @@ header{
     font-size: 18px;
     border-radius: 6px;
 
-}
-.container{
-    width:90%;
-    margin:auto;
-    overflow:hidden;
 }
 .items{
     width:30%;
@@ -105,7 +81,22 @@ header{
     text-align: center;
 }
 footer{
-    background-color: #000;
-    color:#fff;
-    font-size:14px;
+    padding: 10px 0;
+ background-color: #101010;
+ color:#9d9d9d;
+ bottom: 0;
+ width: 100%;
+}
+#ss
+{
+    margin-top: 10%;
+   height: 71vh;
+width:90vh;
+}
+#ss1
+{
+   margin-top: 5%;
+   height: 80vh;
+width:90vh;
+       
 }
