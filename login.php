@@ -1,3 +1,11 @@
+<?php 
+if(isset($_SESSION['id'])){
+header('location: index.php');
+}
+?>
+<?php
+    require("includes/common.php");
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,27 +21,9 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-   <div class="navbar navbar-inverse navbar-fixed-top">
-       <div class="container">
-           <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a href="index.html" class="navbar-brand">Lifestyle Store</a>
-           </div>
-       <div class="collapse navbar-collapse" id="mynavbar">
-       <ul class="nav navbar-nav navbar-right">
-           <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span>sign up</a></li>
-           <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-           
-           </ul>
-       
-       </div>
-           
-       </div>
-    </div>
+   <?php
+    require("includes/header.php");
+    ?>
     <div class="container" id="ss">
     <div class="col-sm-10 col-sm offset-1">
     <div class="panel panel-primary">
@@ -42,31 +32,26 @@
     </div>
         <div class="panel-body">
             <p class="text-warning">Login to make a purchase</p>
-        <form>
+        <form method="post" action="login_submit.php">
             <div class="form-group">
-            <input type="text" class="form-control" name="email id" placeholder="email id">
+            <input type="text" class="form-control" name="email" placeholder="email id" required>
             </div>
             <div class="form-group">
-            <input type="text" class="form-control" name="password" placeholder="password">
+            <input type="text" class="form-control" name="password" placeholder="password" required>
             </div>
             <input type="submit" value="Login" class="btn btn-primary">
         </form>
         </div>
     <div class="panel-footer">
-        Don't have an account?<a href="signup.html"> Register</a>
+        Don't have an account?<a href="signup.php"> Register</a>
         </div>
     </div>
     </div>
     </div>
     
     
-<footer class="footer">
-        <center>
-        <p style="text-align:center;">Copyright © Lifestyle Store. All Rights
-Reserved | Contact Us: +91 90000 00000</p>
-        </center>
-    
-    
-    </footer> 
+<?php
+    require("includes/footer.php");
+    ?>
 </body>
 </html>

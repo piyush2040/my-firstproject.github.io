@@ -1,3 +1,6 @@
+<?php
+    require("includes/common.php");
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,27 +17,13 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-   <div class="nav navbar-inverse navbar-fixed-top">
-       <div class="container">
-           <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a href="#" class="navbar-brand">Lifestyle Store</a>
-           </div>
-       <div class="collapse navbar-collapse" id="mynavbar">
-       <ul class="nav navbar-nav navbar-right">
-           <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span>sign up</a></li>
-           <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-           
-           </ul>
-       
-       </div>
-           
-       </div>
-    </div>
+    <?php
+    require("includes/header.php");
+    ?>
+    <?php
+    if (isset($_SESSION['email'])) {
+ header('products.php');
+}?>
     <div class="content">
     <div id="banner_image">
         <div class="container">
@@ -85,35 +74,8 @@
     
     
     </div>
-    <footer>
-        <center>
-        <p style="text-align:center;">Copyright © Lifestyle Store. All Rights
-Reserved | Contact Us: +91 90000 00000</p>
-        </center>
-    
-    
-    </footer>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <?php
+    require("includes/footer.php");
+    ?>
     </body>
-
-
-
-
-
-
-
 </html>
