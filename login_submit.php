@@ -6,9 +6,9 @@ $email = $_POST['email'];
 $email = mysqli_real_escape_string($conn, $email);
 $password = $_POST['password'];
 $password = mysqli_real_escape_string($conn, $password);
-$password = MD5($password);
+//$password = MD5($password);
 // Query checks if the email and password are present in the database.
-$query = "SELECT id, email FROM users WHERE email='" . $email . "' AND password='" . $password . "'";
+$query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
 $result = mysqli_query($conn, $query)or die($mysqli_error($conn));
 $num = mysqli_num_rows($result);
 // If the email and password are not present in the database, the mysqli_num_rows returns 0, it is assigned to $num.
